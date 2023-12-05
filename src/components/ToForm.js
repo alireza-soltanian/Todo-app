@@ -4,7 +4,12 @@ export const ToForm = ({ addTodo }) => {
   const [value, setvalue] = useState("")
 
   const handlesubmit = e => {
+    if (value === '') {
+      alert('Please enter a valid todo')
+      return
+    };
     e.preventDefault();
+
 
     addTodo(value)
 

@@ -21,6 +21,7 @@ export const TodoWrapper = () => {
 
   const deleteTodo = id => {
     setTodos(todos.filter(todo => todo.id !== id))
+    alert('You have deleted this task!')
   }
   const editTodo = id => {
     setTodos(todos.map(todo => todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo))
@@ -42,7 +43,8 @@ export const TodoWrapper = () => {
         )
 
       ))}
-      <p className='count'>{`You have ${todos.length} pending tasks`}</p>
+      {todos.length < 1 ? null : <p className='count'>{`You have ${todos.length} pending tasks`}</p>
+      }
 
     </div>
   )
