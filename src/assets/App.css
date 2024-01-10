@@ -17,10 +17,6 @@ body {
   align-items: center;
 }
 
-.App {
-  text-align: center;
-}
-
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #fff;
@@ -96,4 +92,26 @@ h1 {
 
 .count {
   color: white;
+}
+
+.link {
+  margin-left:118px;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.link a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+a:visited {
+  color:aquamarine;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color:#8758ff;
 }

@@ -1,12 +1,18 @@
-import './assets/App.css';
-import { TodoWrapper } from './components/TodoWrapper';
+import { Route, Routes } from "react-router-dom";
+import "./assets/App.css";
+import { TodoWrapper } from "./components/TodoWrapper";
+import { LoginSignup } from "./components/LoginSignup/LoginSignup";
+
+
 
 function App() {
-
   return (
-    <div className="App">
-      <TodoWrapper />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<TodoWrapper />} />
+        <Route path="/loginsignup" element={<LoginSignup />} />
+      </Routes>
+    </>
   );
 }
 

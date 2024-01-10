@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const ToForm = ({ addTodo }) => {
   const [value, setvalue] = useState("")
@@ -21,6 +22,7 @@ export const ToForm = ({ addTodo }) => {
       <input type="text" className='todo-input' value={value}
         placeholder='what is the task today?' onChange={(e) => setvalue(e.target.value)} />
       <button type='submit' className='todo-btn'>add task</button>
+      <div className='link'><Link to='/LoginSignup'>SignUp</Link></div>
     </form>
   )
 }
